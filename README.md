@@ -1,70 +1,255 @@
-# Getting Started with Create React App
+# 📊 Página KR - Dashboard de Penetração de Mercado
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dashboard interativo para visualização e análise de penetração de mercado da Cogna B2G no setor educacional brasileiro.
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-18.x-61DAFB?style=flat&logo=react&logoColor=white)
+![Material-UI](https://img.shields.io/badge/Material--UI-Icons-0081CB?style=flat&logo=mui&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-In the project directory, you can run:
+## 📋 Índice
 
-### `npm start`
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias](#tecnologias)
+- [Instalação](#instalação)
+- [Como Usar](#como-usar)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Contribuindo](#contribuindo)
+- [Roadmap](#roadmap)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🎯 Sobre o Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O **Página KR** é um dashboard desenvolvido para análise de Key Results (KR) de penetração de mercado da Cogna no segmento B2G (Business to Government).
 
-### `npm test`
+O sistema permite visualizar e filtrar dados de TAM (Total Addressable Market), SAM (Serviceable Addressable Market) e penetração de mercado em diferentes níveis hierárquicos: região, estado, mesorregião, microrregião e município.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Destaques:
 
-### `npm run build`
+- ✨ Interface intuitiva e responsiva
+- 🗺️ Filtros hierárquicos por localização
+- 📈 Cards de métricas dinâmicos (TAM Total/Fixo/Variável)
+- 📊 Tabela expansível com 3 níveis (Região → Estado → Município)
+- 🔄 Animações de loading suaves
+- 💡 Tooltips informativos com UX Writing
+- 🎨 Design moderno com Material UI Icons
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚡ Funcionalidades
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Filtros Hierárquicos
+- Seleção em cascata: Região → Estado → Mesorregião → Microrregião → Município
+- Filtro direto de município após selecionar estado
+- Filtros avançados (contratos ativos, valores mínimos, etc)
+- Limpar todos os filtros com um clique
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Cards de Métricas
+- **TAM (Total Addressable Market)**
+  - Visualização em Total, Fixo (65%) e Variável (35%)
+  - Valor dinâmico conforme região selecionada
+- **SAM (Serviceable Addressable Market)**: 9.5% do TAM
+- **KR de Penetração**: Participação atual no mercado
+- **Vendas Cogna**: Total de contratos ativos
 
-### `npm run eject`
+### 3. Tabela Expansível
+- Inicia fechada mostrando 5 regiões do Brasil
+- Expansão de região → mostra todos os estados
+- Expansão de estado → mostra até 12 municípios
+- Loading animation (300ms) ao expandir
+- Indentação visual para hierarquia
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. Tooltips Informativos
+- Descrições concisas seguindo UX Writing
+- Aparecem ao hover ou clique
+- Posicionamento inteligente (top, bottom, left, right)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Tecnologias
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **React** 18.x - Framework JavaScript
+- **Material-UI Icons** - Biblioteca de ícones
+- **CSS3** - Estilização (CSS Modules + Variáveis CSS)
+- **JavaScript ES6+** - Lógica e manipulação de dados
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Dependências Principais
 
-## Learn More
+```json
+{
+  "react": "^18.3.1",
+  "react-dom": "^18.3.1",
+  "@mui/icons-material": "^6.1.10",
+  "react-scripts": "5.0.1"
+}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📦 Instalação
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Pré-requisitos
 
-### Code Splitting
+- Node.js 14+ e npm (ou yarn)
+- Git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Passo a passo
 
-### Analyzing the Bundle Size
+1. **Clone o repositório**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+git clone https://github.com/gustavocarvalho472-a11y/P-gina-KR.git
+cd P-gina-KR
+```
 
-### Making a Progressive Web App
+2. **Instale as dependências**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm install
+# ou
+yarn install
+```
 
-### Advanced Configuration
+3. **Inicie o servidor de desenvolvimento**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm start
+# ou
+yarn start
+```
 
-### Deployment
+4. **Acesse no navegador**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+http://localhost:3000
+```
 
-### `npm run build` fails to minify
+## 🚀 Como Usar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Filtrando por Localização
+
+1. Selecione uma **Região** (Norte, Nordeste, Centro-Oeste, Sudeste, Sul)
+2. Escolha um **Estado** dentro da região
+3. (Opcional) Refine por **Mesorregião** e **Microrregião**
+4. Ou selecione diretamente um **Município**
+
+### Visualizando TAM
+
+Clique nos botões no card TAM:
+- **Total**: Orçamento total de educação
+- **Fixo**: 65% do TAM (recursos garantidos)
+- **Variável**: 35% do TAM (recursos negociáveis)
+
+### Expandindo a Tabela
+
+1. Clique em uma **Região** (ex: Sudeste) para ver os estados
+2. Clique em um **Estado** (ex: São Paulo) para ver até 12 municípios
+3. O ícone de seta rotaciona indicando expansão
+4. Aguarde o loading de 300ms
+
+### Aplicando Filtros Avançados
+
+1. Clique no botão **"Filtros avançados"**
+2. Selecione os filtros desejados:
+   - Apenas contratos ativos
+   - Incluir inativos
+   - Contratos de 2024/2023
+   - Valor mínimo
+3. Clique em **"Aplicar filtros"**
+
+## 📁 Estrutura do Projeto
+
+```
+painel-kr-penetracao/
+│
+├── public/                      # Arquivos públicos
+│   ├── index.html
+│   └── favicon.ico
+│
+├── src/
+│   ├── components/              # Componentes React
+│   │   ├── AdvancedFilters.jsx  # Filtros avançados
+│   │   ├── AdvancedFilters.css
+│   │   ├── Dropdown.jsx         # Dropdown customizado
+│   │   ├── Dropdown.css
+│   │   ├── MetricsCards.jsx     # Cards de métricas
+│   │   ├── MetricsCards.css
+│   │   ├── Tooltip.jsx          # Tooltip informativo
+│   │   └── Tooltip.css
+│   │
+│   ├── data/                    # Dados mockados
+│   │   └── mockData.js          # Hierarquia completa BR
+│   │
+│   ├── App.js                   # Componente principal
+│   ├── App.css                  # Estilos principais
+│   └── index.js                 # Entry point
+│
+├── .gitignore                   # Arquivos ignorados pelo Git
+├── package.json                 # Dependências e scripts
+├── package-lock.json            # Lock de dependências
+└── README.md                    # Este arquivo
+```
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Siga estas etapas:
+
+1. **Fork o projeto**
+2. **Crie uma branch para sua feature**
+   ```bash
+   git checkout -b feature/nova-funcionalidade
+   ```
+3. **Commit suas mudanças**
+   ```bash
+   git commit -m "feat: Adiciona nova funcionalidade"
+   ```
+4. **Push para a branch**
+   ```bash
+   git push origin feature/nova-funcionalidade
+   ```
+5. **Abra um Pull Request**
+
+### Padrão de Commits
+
+Seguimos o padrão [Conventional Commits](https://www.conventionalcommits.org/):
+
+- `feat:` Nova funcionalidade
+- `fix:` Correção de bug
+- `docs:` Documentação
+- `style:` Formatação (não afeta lógica)
+- `refactor:` Refatoração de código
+- `test:` Testes
+- `chore:` Manutenção
+
+## 🗺️ Roadmap
+
+### v1.1 (Próxima versão)
+- [ ] Implementar gráficos (Chart.js ou Recharts)
+- [ ] Exportação para Excel/CSV
+- [ ] Modo escuro (Dark Mode)
+- [ ] Busca rápida de município
+
+### v1.2
+- [ ] Integração com API real
+- [ ] Autenticação de usuários
+- [ ] Filtros salvos (favoritos)
+- [ ] Comparador de regiões
+
+### v2.0
+- [ ] Dashboard personalizável (drag & drop)
+- [ ] Notificações de mudanças
+- [ ] Histórico temporal
+- [ ] Relatórios automatizados
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👥 Autores
+
+- **Gustavo Carvalho** - [@gustavocarvalho472-a11y](https://github.com/gustavocarvalho472-a11y)
+
+---
+
+## 📞 Contato
+
+Para dúvidas ou sugestões, abra uma [issue](https://github.com/gustavocarvalho472-a11y/P-gina-KR/issues) no GitHub.
+
+---
+
+**Desenvolvido com ❤️ por Cogna B2G**
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
