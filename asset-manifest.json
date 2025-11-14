@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/P-gina-KR/static/css/main.d54a0a9c.css",
+    "main.js": "/P-gina-KR/static/js/main.92d69fb4.js",
+    "static/js/453.e2afea5a.chunk.js": "/P-gina-KR/static/js/453.e2afea5a.chunk.js",
+    "static/media/logo-cogna-new.svg": "/P-gina-KR/static/media/logo-cogna-new.034d1d27b39aa3ed1ce7cad2387504aa.svg",
+    "index.html": "/P-gina-KR/index.html",
+    "main.d54a0a9c.css.map": "/P-gina-KR/static/css/main.d54a0a9c.css.map",
+    "main.92d69fb4.js.map": "/P-gina-KR/static/js/main.92d69fb4.js.map",
+    "453.e2afea5a.chunk.js.map": "/P-gina-KR/static/js/453.e2afea5a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d54a0a9c.css",
+    "static/js/main.92d69fb4.js"
+  ]
+}
